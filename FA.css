@@ -1,0 +1,1301 @@
+/*Für die Plane Animation wurde https://codepen.io/mrdeeds88/pen/rNNZqVV verwendet*/
+
+
+@media screen and (max-width: 300px) {
+  
+
+body{
+   background-image: url(img/Universe.png);
+}
+
+
+.titelbild{
+    background-image: url(img/Gemini_Generated_Image_z2ku5fz2ku5fz2ku.png);
+    width: 100%;
+    height: 100px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 30%;
+    background-attachment: fixed;
+}
+
+a{
+    font: 1em sans-serif;
+    color: #000;
+    padding: 2%;
+    display: contents;
+}
+
+
+.linkbar{
+    background: gray;
+    padding: 2%;
+    display: block;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border: 2px, gray;
+    border-radius: 120px;
+    box-shadow: -15% 15% 19.5% -7.5% rgba(0, 0, 0, 0.81);
+    -webkit-box-shadow: 0px 8px 6px 3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 8px 6px 3px rgba(0, 0, 0, 0.2);
+    font: 1em sans-serif;
+    width: 70%;
+}
+
+
+.waviy{
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 2%;
+  font-size: 1em;
+}
+
+.waviy:hover{
+    position: relative;
+  }
+
+.waviy:hover span{
+    position: relative;
+    display: inline-block;
+    color: #000;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+@keyframes waviy{
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-0.3em)
+    }
+  }
+
+  .waviy-a:hover span:nth-child(1),
+  .waviy-a:hover span:nth-child(2),
+  .waviy-a:hover span:nth-child(3),
+  .waviy-a:hover span:nth-child(4),
+  .waviy-a:hover span:nth-child(5),
+  .waviy-a:hover span:nth-child(6),
+  .waviy-a:hover span:nth-child(7) {
+    opacity: 1;
+  }
+
+.umrandungContainer{
+   text-align: center;
+  padding: 20px;
+}
+
+.umrandung{
+  background-color: silver;
+  display: inline-block;
+  margin-top: 1%;
+  margin-bottom: 30px;
+  height: 60%;
+  width: 60%;
+  padding-bottom: 2%;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 120px;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+h1{
+  font-size: 1.5em;
+}
+
+h2{
+  font-size: 1.25em;
+}
+
+h3{
+  font-size: 0.75em;
+}
+
+p{
+  font-size: 0.4em;
+}
+
+/* Tabelle */
+table {
+  max-width: 10% !important;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #f0f0f0; /* Hellgrauer Hintergrund */
+}
+
+/* Tabellenkopf (Header) */
+th {
+  max-width: 40px !important;
+  max-height: 15px !important;
+  background-color: #555; /* Dunklerer Header */
+  color: white;
+  border: 2px solid #000;
+  text-align: left;
+  overflow-wrap: break-word; 
+}
+
+/* Tabellenzellen */
+td {
+  max-width: 40px !important;
+  border:2px solid #000;
+  text-align: center;
+  overflow-wrap: break-word; 
+}
+
+/* Abwechselnde Zeilenfarben */
+tr:nth-child(even) {
+  background-color: #fefefe; /* Hellgrauer Hintergrund für jede zweite Zeile */
+}
+
+tr:hover {
+  background-color: #c0c0c0; /* Dunkleres Grau beim Hover */
+}
+
+/*Für das Rotieren des Bildes habe ich das YT Video: 
+Rotating Earth Animation using CSS verwendet und
+die dazugehörige Website https://youthsforum.com/2023/11/rotating-earth-animation-using-css/
+ich habe ebenfalls noch Gemini benutzt, weil nicht alles direkt so funktioniert hat wie ich es
+wollte.*/
+
+.container {
+  perspective: 1000px;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rotateCircle{
+    width: 50%;
+    height: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    border-radius: 50%;
+    animation: rotateCircleAnimation 5s linear 0s infinite;
+    transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+.turnCircle{
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    top:0; bottom: 0; left: 0;right: 0;
+    border-radius: 50%;
+    animation: wormholeAnimation 5s linear 0s infinite;
+    transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+.plane{
+  width:20%;
+  height:20%;
+  border-radius:50%;
+  position:absolute;
+  overflow:hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: planeAnimation 6s linear infinite;
+}
+
+
+.iss{
+  width:20%;
+  height:20%;
+  border-radius:50%;
+  position:absolute;
+  overflow:hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: issAnimation 6s linear infinite;
+}
+
+@keyframes issAnimation{
+ 0% {
+        /* Umlaufbahn-Transformation: Drehung um den Container-Mittelpunkt, dann Verschiebung */
+        transform: translate(-50%, -50%) rotate(0deg) translateX(125px)
+                   /* Eigenrotation des Kreises  */
+                   rotateX(6deg) rotateY(0deg) rotateZ(2deg);
+    }
+    10% {
+        transform: translate(-50%, -50%) rotate(36deg) translateX(125px)
+                   rotateX(6deg) rotateY(10deg) rotateZ(12deg);
+    }
+    20% {
+        transform: translate(-50%, -50%) rotate(72deg) translateX(125px)
+                   rotateX(6deg) rotateY(40deg) rotateZ(128deg);
+    }
+    30% {
+        transform: translate(-50%, -50%) rotate(108deg) translateX(125px)
+                   rotateX(6deg) rotateY(50deg) rotateZ(152deg);
+    }
+    40% {
+        transform: translate(-50%, -50%) rotate(144deg) translateX(125px)
+                   rotateX(6deg) rotateY(0deg) rotateZ(62deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg) translateX(125px)
+                   rotateX(6deg) rotateY(30deg) rotateZ(12deg);
+    }
+    60% {
+        transform: translate(-50%, -50%) rotate(216deg) translateX(125px)
+                   rotateX(6deg) rotateY(120deg) rotateZ(42deg);
+    }
+    70% {
+        transform: translate(-50%, -50%) rotate(252deg) translateX(125px)
+                   rotateX(6deg) rotateY(0deg) rotateZ(18deg);
+    }
+    80% {
+        transform: translate(-50%, -50%) rotate(288deg) translateX(125px)
+                   rotateX(6deg) rotateY(30deg) rotateZ(32deg);
+    }
+    90% {
+        transform: translate(-50%, -50%) rotate(324deg) translateX(125px)
+                   rotateX(6deg) rotateY(20deg) rotateZ(12deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(125px)
+                   rotateX(6deg) rotateY(20deg) rotateZ(42deg);
+}
+}
+
+@keyframes planeAnimation{
+  0%{
+    transform:rotate(0deg)
+              translate(-125px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(180deg)
+              translate(-125px)
+              rotate(-180deg);
+  }
+}
+
+@keyframes rotateCircleAnimation{
+    0% { transform: rotateX(6deg) rotateY(0deg) rotateZ(12deg); } 
+    100% { transform: rotateX(6deg) rotateY(360deg) rotateZ(12deg); } 
+}
+
+@keyframes wormholeAnimation {
+0% { transform: rotate(0deg); } 
+100% { transform: rotate(360deg); }
+}
+
+
+.site-footer {
+    background-color: #333; 
+    color: #bbb;
+    padding: 25px 0;
+    text-align: center; 
+    font-size: 0.9em; 
+    border-top: 3px solid #555; 
+    margin-top: 50px; 
+}
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-copyright {
+    margin-bottom: 5px; 
+}
+
+.footer-author {
+    margin-top: 5px; 
+    font-style: italic;
+    color: #999; 
+}
+}
+
+
+
+@media screen and (min-width: 300.1px) and (max-width: 600px) {
+  
+
+body{
+   background-image: url(img/Universe.png);
+}
+
+
+.titelbild{
+    background-image: url(img/Gemini_Generated_Image_z2ku5fz2ku5fz2ku.png);
+    width: 100%;
+    height: 200px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 35%;
+    background-attachment: fixed;
+}
+
+a{
+    font: 1.3em sans-serif;
+    color: #000;
+    padding: 2%;
+    display: contents;
+}
+
+
+.linkbar{
+    background: gray;
+    padding: 2%;
+    display: block;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border: 2px, gray;
+    border-radius: 120px;
+    box-shadow: -15% 15% 19.5% -7.5% rgba(0, 0, 0, 0.81);
+    -webkit-box-shadow: 0px 8px 6px 3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 8px 6px 3px rgba(0, 0, 0, 0.2);
+    font: 1em sans-serif;
+    width: 70%;
+}
+
+
+.waviy{
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 2%;
+  font-size: 1em;
+}
+
+.waviy:hover{
+    position: relative;
+  }
+
+.waviy:hover span{
+    position: relative;
+    display: inline-block;
+    color: #000;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+@keyframes waviy{
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-0.3em)
+    }
+  }
+
+  .waviy-a:hover span:nth-child(1),
+  .waviy-a:hover span:nth-child(2),
+  .waviy-a:hover span:nth-child(3),
+  .waviy-a:hover span:nth-child(4),
+  .waviy-a:hover span:nth-child(5),
+  .waviy-a:hover span:nth-child(6),
+  .waviy-a:hover span:nth-child(7) {
+    opacity: 1;
+  }
+
+.umrandungContainer{
+   text-align: center;
+  padding: 20px;
+}
+
+.umrandung{
+  background-color: silver;
+  display: inline-block;
+  margin-top: 1%;
+  margin-bottom: 30px;
+  height: 60%;
+  width: 60%;
+  padding-bottom: 2%;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 120px;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+h1{
+  font-size: 2.7em;
+}
+
+h2{
+  font-size: 2.2em;
+}
+
+h3{
+  font-size: 1.3em;
+}
+
+p{
+  font-size: 0.8em;
+}
+
+/* Tabelle */
+table {
+  max-width: 10% !important;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #f0f0f0; /* Hellgrauer Hintergrund */
+}
+
+/* Tabellenkopf (Header) */
+th {
+  max-width: 40px !important;
+  max-height: 15px !important;
+  background-color: #555; /* Dunklerer Header */
+  color: white;
+  border: 2px solid #000;
+  text-align: left;
+  overflow-wrap: break-word; 
+}
+
+/* Tabellenzellen */
+td {
+  max-width: 40px !important;
+  border:2px solid #000;
+  text-align: center;
+  overflow-wrap: break-word; 
+}
+
+/* Abwechselnde Zeilenfarben */
+tr:nth-child(even) {
+  background-color: #fefefe; /* Hellgrauer Hintergrund für jede zweite Zeile */
+}
+
+tr:hover {
+  background-color: #c0c0c0; /* Dunkleres Grau beim Hover */
+}
+
+
+/*Für das Rotieren des Bildes habe ich das YT Video: 
+Rotating Earth Animation using CSS verwendet und
+die dazugehörige Website https://youthsforum.com/2023/11/rotating-earth-animation-using-css/
+ich habe ebenfalls noch Gemini benutzt, weil nicht alles direkt so funktioniert hat wie ich es
+wollte.*/
+
+.container {
+  perspective: 1000px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rotateCircle{
+    width: 50%;
+    height: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    border-radius: 50%;
+    animation: rotateCircleAnimation 5s linear 0s infinite;
+    transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+.turnCircle{
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    top:0; bottom: 0; left: 0;right: 0;
+    border-radius: 50%;
+    animation: wormholeAnimation 5s linear 0s infinite;
+    transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+.plane{
+  width:20%;
+  height:20%;
+  border-radius:50%;
+  position:absolute;
+  overflow:hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: planeAnimation 6s linear infinite;
+}
+
+
+.iss{
+  width:20%;
+  height:20%;
+  border-radius:50%;
+  position:absolute;
+  overflow:hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: issAnimation 6s linear infinite;
+}
+
+@keyframes issAnimation{
+ 0% {
+        /* Umlaufbahn-Transformation: Drehung um den Container-Mittelpunkt, dann Verschiebung */
+        transform: translate(-50%, -50%) rotate(0deg) translateX(125px)
+                   /* Eigenrotation des Kreises  */
+                   rotateX(6deg) rotateY(0deg) rotateZ(2deg);
+    }
+    10% {
+        transform: translate(-50%, -50%) rotate(36deg) translateX(125px)
+                   rotateX(6deg) rotateY(10deg) rotateZ(12deg);
+    }
+    20% {
+        transform: translate(-50%, -50%) rotate(72deg) translateX(125px)
+                   rotateX(6deg) rotateY(40deg) rotateZ(128deg);
+    }
+    30% {
+        transform: translate(-50%, -50%) rotate(108deg) translateX(125px)
+                   rotateX(6deg) rotateY(50deg) rotateZ(152deg);
+    }
+    40% {
+        transform: translate(-50%, -50%) rotate(144deg) translateX(125px)
+                   rotateX(6deg) rotateY(0deg) rotateZ(62deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg) translateX(125px)
+                   rotateX(6deg) rotateY(30deg) rotateZ(12deg);
+    }
+    60% {
+        transform: translate(-50%, -50%) rotate(216deg) translateX(125px)
+                   rotateX(6deg) rotateY(120deg) rotateZ(42deg);
+    }
+    70% {
+        transform: translate(-50%, -50%) rotate(252deg) translateX(125px)
+                   rotateX(6deg) rotateY(0deg) rotateZ(18deg);
+    }
+    80% {
+        transform: translate(-50%, -50%) rotate(288deg) translateX(125px)
+                   rotateX(6deg) rotateY(30deg) rotateZ(32deg);
+    }
+    90% {
+        transform: translate(-50%, -50%) rotate(324deg) translateX(125px)
+                   rotateX(6deg) rotateY(20deg) rotateZ(12deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(125px)
+                   rotateX(6deg) rotateY(20deg) rotateZ(42deg);
+}
+}
+
+@keyframes planeAnimation{
+  0%{
+    transform:rotate(0deg)
+              translate(-125px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(180deg)
+              translate(-125px)
+              rotate(-180deg);
+  }
+}
+
+@keyframes rotateCircleAnimation{
+    0% { transform: rotateX(6deg) rotateY(0deg) rotateZ(12deg); } 
+    100% { transform: rotateX(6deg) rotateY(360deg) rotateZ(12deg); } 
+}
+
+@keyframes wormholeAnimation {
+0% { transform: rotate(0deg); } 
+100% { transform: rotate(360deg); }
+}
+
+.site-footer {
+    background-color: #333; 
+    color: #bbb;
+    padding: 25px 0;
+    text-align: center; 
+    font-size: 0.9em; 
+    border-top: 3px solid #555; 
+    margin-top: 50px; 
+}
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-copyright {
+    margin-bottom: 5px; 
+}
+
+.footer-author {
+    margin-top: 5px; 
+    font-style: italic;
+    color: #999; 
+}
+
+
+}
+
+
+
+
+@media screen and (min-width: 600.1px) and (max-width: 1200px) {
+  
+
+body{
+     background-image: url(img/Universe.png);
+}
+
+.titelbild{
+    background-image: url(img/Gemini_Generated_Image_z2ku5fz2ku5fz2ku.png);
+    width: 100%;
+    height: 200px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 45%;
+    background-attachment: fixed;
+}
+
+a{
+    font: 1.1em sans-serif;
+    color: #000;
+    padding: 2%;
+    display: contents;
+}
+
+
+.linkbar{
+    background: gray;
+    padding: 2%;
+    display: block;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border: 2px, gray;
+    border-radius: 120px;
+    box-shadow: -15% 15% 19.5% -7.5% rgba(0, 0, 0, 0.81);
+    -webkit-box-shadow: 0px 8px 6px 3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 8px 6px 3px rgba(0, 0, 0, 0.2);
+    font: 1em sans-serif;
+    width: 70%;
+}
+
+
+.waviy{
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 2%;
+  font-size: 1.1em;
+}
+
+.waviy:hover{
+    position: relative;
+  }
+
+.waviy:hover span{
+    position: relative;
+    display: inline-block;
+    color: #000;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+@keyframes waviy{
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-0.3em)
+    }
+  }
+
+  .waviy-a:hover span:nth-child(1),
+  .waviy-a:hover span:nth-child(2),
+  .waviy-a:hover span:nth-child(3),
+  .waviy-a:hover span:nth-child(4),
+  .waviy-a:hover span:nth-child(5),
+  .waviy-a:hover span:nth-child(6),
+  .waviy-a:hover span:nth-child(7) {
+    opacity: 1;
+  }
+
+.umrandungContainer{
+  text-align: center;
+  padding: 10px;
+}
+
+.umrandung{
+  background-color: silver;
+  display: inline-block;
+  margin-top: 1%;
+  margin-bottom: 30px;
+  height: 60%;
+  width: 60%;
+  padding-bottom: 2%;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 120px;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+h1{
+  font-size: 4em;
+}
+
+h2{
+  font-size: 3em;
+}
+
+h3{
+  font-size: 2em;
+}
+
+p{
+  font-size: 1em;
+}
+
+/* Tabelle */
+table {
+  max-width: 300px;
+  margin: 45px auto;
+  border-collapse: collapse;
+  background-color: #f0f0f0; /* Hellgrauer Hintergrund */
+}
+
+/* Tabellenkopf (Header) */
+th {
+  background-color: #555; /* Dunklerer Header */
+  color: white;
+  padding:0.5%;
+  border: 2px solid #000;
+  text-align: left;
+}
+
+/* Tabellenzellen */
+td {
+  padding: 0.5%;
+  border:1.5px solid #000;
+  text-align: center;
+}
+
+/* Abwechselnde Zeilenfarben */
+tr:nth-child(even) {
+  background-color: #fefefe; /* Hellgrauer Hintergrund für jede zweite Zeile */
+}
+
+tr:hover {
+  background-color: #c0c0c0; /* Dunkleres Grau beim Hover */
+}
+
+
+/*Für das Rotieren des Bildes habe ich das YT Video: 
+Rotating Earth Animation using CSS verwendet und
+die dazugehörige Website https://youthsforum.com/2023/11/rotating-earth-animation-using-css/
+ich habe ebenfalls noch Gemini benutzt, weil nicht alles direkt so funktioniert hat wie ich es
+wollte.*/
+
+.container {
+  perspective: 1000px;
+  width: 300px;
+  height: 300px;
+  position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rotateCircle{
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    border-radius: 50%;
+    animation: rotateCircleAnimation 5s linear 0s infinite;
+    transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+.turnCircle{
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    border-radius: 50%;
+    animation: wormholeAnimation 5s linear 0s infinite;
+    transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+.plane{
+  width:20%;
+  height:20%;
+  border-radius:50%;
+  position:absolute;
+  overflow:hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: planeAnimation 6s linear infinite;
+}
+
+.iss{
+  width:20%;
+  height:20%;
+  border-radius:50%;
+  position:absolute;
+  overflow:hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: issAnimation 6s linear infinite;
+}
+
+@keyframes issAnimation{
+ 0% {
+        /* Umlaufbahn-Transformation: Drehung um den Container-Mittelpunkt, dann Verschiebung */
+        transform: translate(-50%, -50%) rotate(0deg) translateX(125px)
+                   /* Eigenrotation des Kreises  */
+                   rotateX(6deg) rotateY(0deg) rotateZ(2deg);
+    }
+    10% {
+        transform: translate(-50%, -50%) rotate(36deg) translateX(125px)
+                   rotateX(6deg) rotateY(10deg) rotateZ(12deg);
+    }
+    20% {
+        transform: translate(-50%, -50%) rotate(72deg) translateX(125px)
+                   rotateX(6deg) rotateY(40deg) rotateZ(128deg);
+    }
+    30% {
+        transform: translate(-50%, -50%) rotate(108deg) translateX(125px)
+                   rotateX(6deg) rotateY(50deg) rotateZ(152deg);
+    }
+    40% {
+        transform: translate(-50%, -50%) rotate(144deg) translateX(125px)
+                   rotateX(6deg) rotateY(0deg) rotateZ(62deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg) translateX(125px)
+                   rotateX(6deg) rotateY(30deg) rotateZ(12deg);
+    }
+    60% {
+        transform: translate(-50%, -50%) rotate(216deg) translateX(125px)
+                   rotateX(6deg) rotateY(120deg) rotateZ(42deg);
+    }
+    70% {
+        transform: translate(-50%, -50%) rotate(252deg) translateX(125px)
+                   rotateX(6deg) rotateY(0deg) rotateZ(18deg);
+    }
+    80% {
+        transform: translate(-50%, -50%) rotate(288deg) translateX(125px)
+                   rotateX(6deg) rotateY(30deg) rotateZ(32deg);
+    }
+    90% {
+        transform: translate(-50%, -50%) rotate(324deg) translateX(125px)
+                   rotateX(6deg) rotateY(20deg) rotateZ(12deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(125px)
+                   rotateX(6deg) rotateY(20deg) rotateZ(42deg);
+}
+}
+
+@keyframes planeAnimation{
+  0%{
+    transform:rotate(0deg)
+              translate(-125px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(180deg)
+              translate(-125px)
+              rotate(-180deg);
+  }
+}
+
+@keyframes rotateCircleAnimation{
+    0% { transform: rotateX(6deg) rotateY(0deg) rotateZ(6deg); } 
+    100% { transform: rotateX(6deg) rotateY(360deg) rotateZ(6deg); } 
+}
+
+@keyframes wormholeAnimation {
+0% { transform: rotate(0deg); } 
+100% { transform: rotate(360deg); }
+}
+
+.site-footer {
+    background-color: #333; 
+    color: #bbb;
+    padding: 25px 0;
+    text-align: center; 
+    font-size: 0.9em; 
+    border-top: 3px solid #555; 
+    margin-top: 50px; 
+}
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-copyright {
+    margin-bottom: 5px; 
+}
+
+.footer-author {
+    margin-top: 5px; 
+    font-style: italic;
+    color: #999; 
+}
+}
+
+
+
+
+
+@media screen and (min-width: 1201px) {
+  
+
+body{
+     background-image: url(img/Universe.png);
+}
+
+.titelbild{
+    background-image: url(img/Gemini_Generated_Image_z2ku5fz2ku5fz2ku.png);
+    width: 100%;
+    height: 300px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 60%;
+    background-attachment: fixed;
+}
+
+a{
+    font: 1.3em sans-serif;
+    color: #000;
+    padding: 2%;
+    display: contents;
+}
+
+
+.linkbar{
+    background: gray;
+    padding: 2%;
+    display: block;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border: 2px, gray;
+    border-radius: 120px;
+    box-shadow: -15% 15% 19.5% -7.5% rgba(0, 0, 0, 0.81);
+    -webkit-box-shadow: 0px 8px 6px 3px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 8px 6px 3px rgba(0, 0, 0, 0.2);
+    font: 1em sans-serif;
+    width: 70%;
+}
+
+
+.waviy{
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 2%;
+  font-size: 1.5em;
+}
+
+.waviy:hover{
+    position: relative;
+  }
+
+.waviy:hover span{
+    position: relative;
+    display: inline-block;
+    color: #000;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+@keyframes waviy{
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-0.3em)
+    }
+  }
+
+  .waviy-a:hover span:nth-child(1),
+  .waviy-a:hover span:nth-child(2),
+  .waviy-a:hover span:nth-child(3),
+  .waviy-a:hover span:nth-child(4),
+  .waviy-a:hover span:nth-child(5),
+  .waviy-a:hover span:nth-child(6),
+  .waviy-a:hover span:nth-child(7) {
+    opacity: 1;
+  }
+
+.umrandungContainer{
+   text-align: center;
+  padding: 10px;
+}
+
+.umrandung{
+  background-color: silver;
+  display: inline-block;
+  margin-top: 1%;
+  margin-bottom: 30px;
+  height: 60%;
+  width: 60%;
+  padding-bottom: 2%;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 120px;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+h1{
+  font-size: 6em;
+}
+
+h2{
+  font-size: 5em;
+}
+
+h3{
+  font-size: 3em;
+}
+
+p{
+  font-size: 1.5em;
+}
+
+/* Tabelle */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: #f0f0f0; /* Hellgrauer Hintergrund */
+}
+
+/* Tabellenkopf (Header) */
+th {
+  background-color: #555; /* Dunklerer Header */
+  color: white;
+  padding: 2%;
+  border: 2px solid #000;
+  text-align: left;
+}
+
+/* Tabellenzellen */
+td {
+  width: 27%;
+  padding: 2%;
+  border:2px solid #000;
+  text-align: center;
+}
+
+/* Abwechselnde Zeilenfarben */
+tr:nth-child(even) {
+  background-color: #fefefe; /* Hellgrauer Hintergrund für jede zweite Zeile */
+}
+
+tr:hover {
+  background-color: #c0c0c0; /* Dunkleres Grau beim Hover */
+}
+
+
+/*Für das Rotieren des Bildes habe ich das YT Video: 
+Rotating Earth Animation using CSS verwendet und
+die dazugehörige Website https://youthsforum.com/2023/11/rotating-earth-animation-using-css/
+ich habe ebenfalls noch Gemini benutzt, weil nicht alles direkt so funktioniert hat wie ich es
+wollte.*/
+
+.container {
+  perspective: 1000px;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rotateCircle{
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    border-radius: 50%;
+    animation: rotateCircleAnimation 5s linear 0s infinite;
+    transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+.turnCircle{
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    border-radius: 50%;
+    animation: wormholeAnimation 5s linear 0s infinite;
+    transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+.plane{
+  width:20%;
+  height:20%;
+  border-radius:50%;
+  position:absolute;
+  overflow:hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: planeAnimation 6s linear infinite;
+}
+
+.iss{
+  width:20%;
+  height:20%;
+  border-radius:50%;
+  position:absolute;
+  overflow:hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: issAnimation 6s linear infinite;
+}
+
+@keyframes issAnimation{
+ 0% {
+        /* Umlaufbahn-Transformation: Drehung um den Container-Mittelpunkt, dann Verschiebung */
+        transform: translate(-50%, -50%) rotate(0deg) translateX(125px)
+                   /* Eigenrotation des Kreises  */
+                   rotateX(6deg) rotateY(0deg) rotateZ(2deg);
+    }
+    10% {
+        transform: translate(-50%, -50%) rotate(36deg) translateX(125px)
+                   rotateX(6deg) rotateY(10deg) rotateZ(12deg);
+    }
+    20% {
+        transform: translate(-50%, -50%) rotate(72deg) translateX(125px)
+                   rotateX(6deg) rotateY(40deg) rotateZ(128deg);
+    }
+    30% {
+        transform: translate(-50%, -50%) rotate(108deg) translateX(125px)
+                   rotateX(6deg) rotateY(50deg) rotateZ(152deg);
+    }
+    40% {
+        transform: translate(-50%, -50%) rotate(144deg) translateX(125px)
+                   rotateX(6deg) rotateY(0deg) rotateZ(62deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg) translateX(125px)
+                   rotateX(6deg) rotateY(30deg) rotateZ(12deg);
+    }
+    60% {
+        transform: translate(-50%, -50%) rotate(216deg) translateX(125px)
+                   rotateX(6deg) rotateY(120deg) rotateZ(42deg);
+    }
+    70% {
+        transform: translate(-50%, -50%) rotate(252deg) translateX(125px)
+                   rotateX(6deg) rotateY(0deg) rotateZ(18deg);
+    }
+    80% {
+        transform: translate(-50%, -50%) rotate(288deg) translateX(125px)
+                   rotateX(6deg) rotateY(30deg) rotateZ(32deg);
+    }
+    90% {
+        transform: translate(-50%, -50%) rotate(324deg) translateX(125px)
+                   rotateX(6deg) rotateY(20deg) rotateZ(12deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(125px)
+                   rotateX(6deg) rotateY(20deg) rotateZ(42deg);
+}
+}
+
+@keyframes planeAnimation{
+  0%{
+    transform:rotate(0deg)
+              translate(-125px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(180deg)
+              translate(-125px)
+              rotate(-180deg);
+  }
+}
+
+@keyframes rotateCircleAnimation{
+    0% { transform: rotateX(6deg) rotateY(0deg) rotateZ(6deg); } 
+    100% { transform: rotateX(6deg) rotateY(360deg) rotateZ(6deg); } 
+}
+
+@keyframes wormholeAnimation {
+0% { transform: rotate(0deg); } 
+100% { transform: rotate(360deg); }
+}
+
+
+.site-footer {
+    background-color: #333; 
+    color: #bbb;
+    padding: 25px 0;
+    text-align: center; 
+    font-size: 0.9em; 
+    border-top: 3px solid #555; 
+    margin-top: 50px; 
+}
+.footer-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-copyright {
+    margin-bottom: 5px; 
+}
+
+.footer-author {
+    margin-top: 5px; 
+    font-style: italic;
+    color: #999; 
+}
+}
