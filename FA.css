@@ -16,7 +16,7 @@ body{
     height: 100px;
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: 100% 30%;
+    background-size: 100% 15%;
     background-attachment: fixed;
 }
 
@@ -231,48 +231,48 @@ wollte.*/
 @keyframes issAnimation{
  0% {
         /* Umlaufbahn-Transformation: Drehung um den Container-Mittelpunkt, dann Verschiebung */
-        transform: translate(-50%, -50%) rotate(0deg) translateX(125px)
+        transform: translate(-3%, -3%) rotate(0deg) translateX(30px)
                    /* Eigenrotation des Kreises  */
                    rotateX(6deg) rotateY(0deg) rotateZ(2deg);
     }
     10% {
-        transform: translate(-50%, -50%) rotate(36deg) translateX(125px)
+        transform: translate(-3%, -3%) rotate(36deg) translateX(30px)
                    rotateX(6deg) rotateY(10deg) rotateZ(12deg);
     }
     20% {
-        transform: translate(-50%, -50%) rotate(72deg) translateX(125px)
+        transform: translate(-3%, -3%) rotate(72deg) translateX(30px)
                    rotateX(6deg) rotateY(40deg) rotateZ(128deg);
     }
     30% {
-        transform: translate(-50%, -50%) rotate(108deg) translateX(125px)
+        transform: translate(-3%, -3%) rotate(108deg) translateX(30px)
                    rotateX(6deg) rotateY(50deg) rotateZ(152deg);
     }
     40% {
-        transform: translate(-50%, -50%) rotate(144deg) translateX(125px)
+        transform: translate(-3%, -3%) rotate(144deg) translateX(30px)
                    rotateX(6deg) rotateY(0deg) rotateZ(62deg);
     }
     50% {
-        transform: translate(-50%, -50%) rotate(180deg) translateX(125px)
+        transform: translate(-3%, -3%) rotate(180deg) translateX(30px)
                    rotateX(6deg) rotateY(30deg) rotateZ(12deg);
     }
     60% {
-        transform: translate(-50%, -50%) rotate(216deg) translateX(125px)
+        transform: translate(-3%, -3%) rotate(216deg) translateX(30px)
                    rotateX(6deg) rotateY(120deg) rotateZ(42deg);
     }
     70% {
-        transform: translate(-50%, -50%) rotate(252deg) translateX(125px)
+        transform: translate(-3%, -3%) rotate(252deg) translateX(30px)
                    rotateX(6deg) rotateY(0deg) rotateZ(18deg);
     }
     80% {
-        transform: translate(-50%, -50%) rotate(288deg) translateX(125px)
+        transform: translate(-3%, -3%) rotate(288deg) translateX(30px)
                    rotateX(6deg) rotateY(30deg) rotateZ(32deg);
     }
     90% {
-        transform: translate(-50%, -50%) rotate(324deg) translateX(125px)
+        transform: translate(-3%, -3%) rotate(324deg) translateX(30px)
                    rotateX(6deg) rotateY(20deg) rotateZ(12deg);
     }
     100% {
-        transform: translate(-50%, -50%) rotate(360deg) translateX(125px)
+        transform: translate(-3%, -3%) rotate(360deg) translateX(30px)
                    rotateX(6deg) rotateY(20deg) rotateZ(42deg);
 }
 }
@@ -280,13 +280,13 @@ wollte.*/
 @keyframes planeAnimation{
   0%{
     transform:rotate(0deg)
-              translate(-125px)
+              translate(-60px)
               rotate(0deg);
   
   }
   100%{
     transform:rotate(180deg)
-              translate(-125px)
+              translate(-60px)
               rotate(-180deg);
   }
 }
@@ -560,48 +560,48 @@ wollte.*/
 @keyframes issAnimation{
  0% {
         /* Umlaufbahn-Transformation: Drehung um den Container-Mittelpunkt, dann Verschiebung */
-        transform: translate(-50%, -50%) rotate(0deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(0deg) translateX(80px)
                    /* Eigenrotation des Kreises  */
                    rotateX(6deg) rotateY(0deg) rotateZ(2deg);
     }
     10% {
-        transform: translate(-50%, -50%) rotate(36deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(36deg) translateX(80px)
                    rotateX(6deg) rotateY(10deg) rotateZ(12deg);
     }
     20% {
-        transform: translate(-50%, -50%) rotate(72deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(72deg) translateX(80px)
                    rotateX(6deg) rotateY(40deg) rotateZ(128deg);
     }
     30% {
-        transform: translate(-50%, -50%) rotate(108deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(108deg) translateX(80px)
                    rotateX(6deg) rotateY(50deg) rotateZ(152deg);
     }
     40% {
-        transform: translate(-50%, -50%) rotate(144deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(144deg) translateX(80px)
                    rotateX(6deg) rotateY(0deg) rotateZ(62deg);
     }
     50% {
-        transform: translate(-50%, -50%) rotate(180deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(180deg) translateX(80px)
                    rotateX(6deg) rotateY(30deg) rotateZ(12deg);
     }
     60% {
-        transform: translate(-50%, -50%) rotate(216deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(216deg) translateX(80px)
                    rotateX(6deg) rotateY(120deg) rotateZ(42deg);
     }
     70% {
-        transform: translate(-50%, -50%) rotate(252deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(252deg) translateX(80px)
                    rotateX(6deg) rotateY(0deg) rotateZ(18deg);
     }
     80% {
-        transform: translate(-50%, -50%) rotate(288deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(288deg) translateX(80px)
                    rotateX(6deg) rotateY(30deg) rotateZ(32deg);
     }
     90% {
-        transform: translate(-50%, -50%) rotate(324deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(324deg) translateX(80px)
                    rotateX(6deg) rotateY(20deg) rotateZ(12deg);
     }
     100% {
-        transform: translate(-50%, -50%) rotate(360deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(360deg) translateX(80px)
                    rotateX(6deg) rotateY(20deg) rotateZ(42deg);
 }
 }
@@ -609,13 +609,13 @@ wollte.*/
 @keyframes planeAnimation{
   0%{
     transform:rotate(0deg)
-              translate(-125px)
+              translate(-100px)
               rotate(0deg);
   
   }
   100%{
     transform:rotate(180deg)
-              translate(-125px)
+              translate(-100px)
               rotate(-180deg);
   }
 }
@@ -671,10 +671,10 @@ body{
 .titelbild{
     background-image: url(img/Gemini_Generated_Image_z2ku5fz2ku5fz2ku.png);
     width: 100%;
-    height: 200px;
+    height: 250px;
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: 100% 45%;
+    background-size: 100% 35%;
     background-attachment: fixed;
 }
 
@@ -823,8 +823,8 @@ wollte.*/
 
 .container {
   perspective: 1000px;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   position: center;
   display: flex;
   justify-content: center;
@@ -882,48 +882,48 @@ wollte.*/
 @keyframes issAnimation{
  0% {
         /* Umlaufbahn-Transformation: Drehung um den Container-Mittelpunkt, dann Verschiebung */
-        transform: translate(-50%, -50%) rotate(0deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(0deg) translateX(80px)
                    /* Eigenrotation des Kreises  */
                    rotateX(6deg) rotateY(0deg) rotateZ(2deg);
     }
     10% {
-        transform: translate(-50%, -50%) rotate(36deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(36deg) translateX(80px)
                    rotateX(6deg) rotateY(10deg) rotateZ(12deg);
     }
     20% {
-        transform: translate(-50%, -50%) rotate(72deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(72deg) translateX(80px)
                    rotateX(6deg) rotateY(40deg) rotateZ(128deg);
     }
     30% {
-        transform: translate(-50%, -50%) rotate(108deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(108deg) translateX(80px)
                    rotateX(6deg) rotateY(50deg) rotateZ(152deg);
     }
     40% {
-        transform: translate(-50%, -50%) rotate(144deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(144deg) translateX(80px)
                    rotateX(6deg) rotateY(0deg) rotateZ(62deg);
     }
     50% {
-        transform: translate(-50%, -50%) rotate(180deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(180deg) translateX(80px)
                    rotateX(6deg) rotateY(30deg) rotateZ(12deg);
     }
     60% {
-        transform: translate(-50%, -50%) rotate(216deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(216deg) translateX(80px)
                    rotateX(6deg) rotateY(120deg) rotateZ(42deg);
     }
     70% {
-        transform: translate(-50%, -50%) rotate(252deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(252deg) translateX(80px)
                    rotateX(6deg) rotateY(0deg) rotateZ(18deg);
     }
     80% {
-        transform: translate(-50%, -50%) rotate(288deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(288deg) translateX(80px)
                    rotateX(6deg) rotateY(30deg) rotateZ(32deg);
     }
     90% {
-        transform: translate(-50%, -50%) rotate(324deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(324deg) translateX(80px)
                    rotateX(6deg) rotateY(20deg) rotateZ(12deg);
     }
     100% {
-        transform: translate(-50%, -50%) rotate(360deg) translateX(125px)
+        transform: translate(-8%, -8%) rotate(360deg) translateX(80px)
                    rotateX(6deg) rotateY(20deg) rotateZ(42deg);
 }
 }
@@ -931,13 +931,13 @@ wollte.*/
 @keyframes planeAnimation{
   0%{
     transform:rotate(0deg)
-              translate(-125px)
+              translate(-100px)
               rotate(0deg);
   
   }
   100%{
     transform:rotate(180deg)
-              translate(-125px)
+              translate(-100px)
               rotate(-180deg);
   }
 }
@@ -992,10 +992,10 @@ body{
 .titelbild{
     background-image: url(img/Gemini_Generated_Image_z2ku5fz2ku5fz2ku.png);
     width: 100%;
-    height: 300px;
+    height: 320px;
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: 100% 60%;
+    background-size: 100% 50%;
     background-attachment: fixed;
 }
 
