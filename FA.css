@@ -191,6 +191,14 @@ wollte.*/
     transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
 }
 
+.box{
+  width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
 .turnCircle{
     width: 50%;
     height: 50%;
@@ -520,6 +528,14 @@ wollte.*/
     transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
 }
 
+.box{
+  width: 50%;
+  height: 50%;
+  background-size: cover;    
+  background-repeat: no-repeat; 
+  background-position: center;
+}
+
 .turnCircle{
     width: 50%;
     height: 50%;
@@ -844,6 +860,14 @@ wollte.*/
     transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
 }
 
+.box{
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
 .turnCircle{
     width: 50%;
     height: 50%;
@@ -1164,6 +1188,14 @@ wollte.*/
     border-radius: 50%;
     animation: rotateCircleAnimation 5s linear 0s infinite;
     transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+.box{
+  width: 50%;
+  height: 50%;
+  background-size: cover;    
+  background-repeat: no-repeat; 
+  background-position: center;
 }
 
 .turnCircle{
